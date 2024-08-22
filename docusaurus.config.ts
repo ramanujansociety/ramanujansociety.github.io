@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Ramanujan Society',
   tagline: 'Ramanujan Society Documentation',
   favicon: 'img/favicon.ico',
-
+  
 
   // Set the production url of your site here
   url: 'https://ramanujansociety.github.io',
@@ -132,38 +132,17 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Ramanujan Society`,
     },
-    metadatas: [
+    metadata: [
+      { name: 'twitter:card', content: 'summary_large_image' },
       {
-        name: 'description',
-        content: 'Ramanujan Society Documentation',
+        name: 'twitter:image',
+        content:
+          'https://avatars.githubusercontent.com/u/69087149?s=400&u=5ec3f0d2890a47f523e591c5340d7cb114e5f3fc&v=4',
       },
-      {
-        name: 'og:title',
-        content: 'Ramanujan Society',
-      },
-      {
-        name: 'og:description',
-        content: 'Ramanujan Society Documentation',
-      },
-      {
-        name: 'og:image',
-        content: 'https://avatars.githubusercontent.com/u/69087149?s=400&u=5ec3f0d2890a47f523e591c5340d7cb114e5f3fc&v=4',
-      },
-      {
-        name: 'twitter:card',
-        content: 'summary_large_image',
-      },
-      {
-        name: 'twitter:title',
-        content: 'Ramanujan Society',
-      },
+      { name: 'twitter:title', content: 'Ramanujan Society' },
       {
         name: 'twitter:description',
         content: 'Ramanujan Society Documentation',
-      },
-      {
-        name: 'twitter:image',
-        content: 'https://avatars.githubusercontent.com/u/69087149?s=400&u=5ec3f0d2890a47f523e591c5340d7cb114e5f3fc&v=4',
       },
     ],
     prism: {
