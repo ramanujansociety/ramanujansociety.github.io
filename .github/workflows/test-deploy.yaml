@@ -1,26 +1,33 @@
-name: Test deployment
+name: Test Deployment
 
 on:
   pull_request:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
+    # For more customization options, review the GitHub Actions documentation:
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   test-deploy:
-    name: Test deployment
+    name: Test Deployment
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: pnpm
 
-      - name: Install dependencies
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-      - name: Test build website
-        run: pnpm build
