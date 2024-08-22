@@ -6,7 +6,6 @@ const config: Config = {
   title: 'Ramanujan Society',
   tagline: 'Ramanujan Society Documentation',
   favicon: 'img/favicon.ico',
-  
 
   // Set the production url of your site here
   url: 'https://ramanujansociety.github.io',
