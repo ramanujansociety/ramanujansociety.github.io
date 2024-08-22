@@ -7,8 +7,9 @@ const config: Config = {
   tagline: 'Ramanujan Society Documentation',
   favicon: 'img/favicon.ico',
 
+
   // Set the production url of your site here
-  url: 'https://ramanujansociety.github.io/',
+  url: 'https://ramanujansociety.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -131,6 +132,40 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Ramanujan Society`,
     },
+    metadatas: [
+      {
+        name: 'description',
+        content: 'Ramanujan Society Documentation',
+      },
+      {
+        name: 'og:title',
+        content: 'Ramanujan Society',
+      },
+      {
+        name: 'og:description',
+        content: 'Ramanujan Society Documentation',
+      },
+      {
+        name: 'og:image',
+        content: 'https://avatars.githubusercontent.com/u/69087149?s=400&u=5ec3f0d2890a47f523e591c5340d7cb114e5f3fc&v=4',
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:title',
+        content: 'Ramanujan Society',
+      },
+      {
+        name: 'twitter:description',
+        content: 'Ramanujan Society Documentation',
+      },
+      {
+        name: 'twitter:image',
+        content: 'https://avatars.githubusercontent.com/u/69087149?s=400&u=5ec3f0d2890a47f523e591c5340d7cb114e5f3fc&v=4',
+      },
+    ],
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
